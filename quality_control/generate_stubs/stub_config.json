@@ -1,0 +1,52 @@
+{
+  "accepted_modules": {
+    "typing": [
+      "*"
+    ],
+    "pathlib": [
+      "Path"
+    ],
+    "json": [
+      "load"
+    ]
+  },
+  "specific_file_rules": {
+    "pipeline.py": {
+      "accepted_modules": {
+        "networkx": [
+          "DiGraph"
+        ],
+        "core_utils.pipeline": [
+          "PipelineProtocol",
+          "LibraryWrapper",
+          "AbstractCoNLLUAnalyzer",
+          "UDPipeDocument",
+          "StanzaDocument",
+          "CoNLLUDocument",
+          "TreeNode",
+          "UnifiedCoNLLUDocument"
+        ],
+        "core_utils.article.article": [
+          "Article"
+        ]
+      }
+    },
+    "main.py": {
+      "path_contains": "lab_4_retrieval_w_clustering",
+      "accepted_modules": {
+        "lab_3_ann_retriever.main": [
+          "BasicSearchEngine",
+          "Tokenizer",
+          "Vector",
+          "Vectorizer"
+        ]
+      }
+    },
+    "service.py": {
+      "replacement": {
+        "lab_7_llm": "app, pipeline = None, None",
+        "lab_8_sft": "app, pre_trained_pipeline, fine_tuned_pipeline = None, None, None"
+      }
+    }
+  }
+}
